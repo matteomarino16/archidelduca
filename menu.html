@@ -3,8 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menù - Archi del Duca</title>
+    <title>Menu - Archi del Duca</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Stile globale per rimuovere i trattini sotto i link di navigazione */
+        nav .menu li a::after,
+        nav .menu li a::before,
+        nav .menu li::after,
+        nav .menu li::before,
+        .menu li a::after,
+        .menu li a::before,
+        .menu li::after,
+        .menu li::before {
+            display: none !important;
+            content: none !important;
+            border: none !important;
+            text-decoration: none !important;
+            background: none !important;
+        }
+    </style>
+    <style>
+        /* Stili per le immagini del menu */
+        .menu-images {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px 0;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        .menu-images img {
+            max-width: 100%;
+            height: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Media query per schermi desktop */
+        @media screen and (min-width: 768px) {
+            .menu-images {
+                max-width: 60%;
+            }
+            .menu-images img {
+                max-width: 60%;
+            }
+        }
+        
+        /* Media query per schermi ancora più grandi */
+        @media screen and (min-width: 1200px) {
+            .menu-images {
+                max-width: 50%;
+            }
+            .menu-images img {
+                max-width: 50%;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="content-wrapper">
@@ -24,36 +79,73 @@
         <!-- Menu di navigazione -->
         <nav id="nav-menu">
             <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="menu.html">Menù</a></li>
-                <li><a href="galleria.html">Galleria</a></li>
+                <li><a href="index.html" style="border: none; text-decoration: none;">Home</a></li>
+                <li><a href="menu.html" style="border: none; text-decoration: none;">Menù</a></li>
+                <li><a href="galleria.html" style="border: none; text-decoration: none;">Galleria</a></li>
             </ul>
         </nav>
+        <style>
+            /* Rimuovi completamente i trattini sotto i link di navigazione */
+            nav .menu li a::after,
+            nav .menu li a::before,
+            nav .menu li::after,
+            nav .menu li::before {
+                display: none !important;
+                content: none !important;
+                border: none !important;
+                text-decoration: none !important;
+            }
+            
+            /* Rimuovi eventuali bordi o decorazioni */
+            nav .menu li a,
+            nav .menu li {
+                border: none !important;
+                border-bottom: none !important;
+                text-decoration: none !important;
+                background-image: none !important;
+            }
+            
+            /* Rimuovi eventuali stili ereditati */
+            .menu li a:hover::after {
+                width: 0 !important;
+            }
+        </style>
     </header>
-
-    <!-- Sezione Menù -->
+    
+    <!-- Sezione Menu con immagini -->
     <section class="menu-section">
-        <h2 class="BebasNeue-font">Il Nostro Menù</h2>
-        <div class="menu-coming-soon">
-            <h3 style="text-align: center; font-size: 2em; margin: 50px 0; font-style: italic; font-family: 'Playfair Display', serif;">Menù presto disponibile</h3>
+        <div class="menu-images">
+            <img src="Pagina1.png" alt="Menu Pagina 1">
+            <img src="Pagina2.png" alt="Menu Pagina 2">
+            <img src="Pagina3.png" alt="Menu Pagina 3">
+            <img src="Pagina4.png" alt="Menu Pagina 4">
+            <img src="Pagina5.png" alt="Menu Pagina 5">
+            <img src="Pagina6.png" alt="Menu Pagina 6">
+            <img src="allergeni.png" alt="Allergeni">
         </div>
     </section>
-
-    <!-- Footer -->
-        </div>
-        <footer>
-            <p>Archi del Duca - Via Cirillo, 10 - Martina Franca </p>
-            <p>Tel: +39 3387529724 | Mail: info@archidelduca.it</p>
-            <p> P.iva 026556940737</p>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
     
-            <p>&copy; 2025 ArchidelDuca.it - Tutti i diritti riservati</p>
-             <p>  Web by <a href="https://www.instagram.com/_matteomarino">Matteo Marino</a> </p>
-        </footer>
+    <!-- Footer -->
+    </div>
+    <footer>
+        <p>Archi del Duca - Via Cirillo, 10 - Martina Franca </p>
+        <p>Tel: +39 3387529724 | Mail: info@archidelduca.it</p>
+        <p> P.iva 026556940737</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
 
+        <p>&copy; 2025 ArchidelDuca.it - Tutti i diritti riservati</p>
+        <p>Web by <a href="https://www.instagram.com/_matteomarino">Matteo Marino</a> </p>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/+393387529724" class="whatsapp-button" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">Prenota un tavolo</span>
+    </a>
+    
     <!-- Script per il menu hamburger -->
     <script>
         const hamburger = document.getElementById('hamburger');
